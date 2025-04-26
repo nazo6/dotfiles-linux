@@ -1,0 +1,62 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = '''
+[╭─](bold green)$os$directory$git_branch$git_status[ ](bg:#444444)[](fg:#444444)$fill[](fg:#444444)[ ](bg:#444444)$status
+[╰─](bold green) '''
+
+command_timeout = 2000
+
+[os]
+style = "fg:#00afff bg:#444444"
+format = '[ $symbol]($style)'
+disabled = false
+
+[directory]
+style = "fg:#00afff bg:#444444"
+format = "[│ ](bg:#444444)[$path]($style)"
+truncation_length = 5
+truncate_to_repo = false
+
+
+[git_status]
+style = "bg:#444444 fg:#d7af00"
+stashed = "  ${count}"
+ahead = " ⇡${count}"
+behind = " ⇣${count}"
+diverged = " ⇕${ahead_count} ${behind_count}"
+conflicted = "  ${count}"
+deleted = "  ${count}"
+renamed = "  ${count}"
+modified = "  ${count}"
+staged = "  ${count}"
+untracked = "  ${count}"
+format = "[$stashed$staged$modified$renamed$untracked$deleted$conflicted$ahead_behind]($style)"
+
+[git_branch]
+style = "bg:#444444 fg:#98c379"
+symbol = ""
+format = "[  $symbol $branch]($style)"
+
+[fill]
+symbol = '·'
+style = 'green'
+
+[status]
+style = "bg:#444444"
+disabled = false
+format = '[$symbol $status ]($style)'
+
+[os.symbols]
+Alpine = " "
+Android = " "
+Arch = " "
+CentOS = " "
+Debian = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Manjaro = " "
+NixOS = " "
+Ubuntu = " "
+Unknown = " "
+Windows = " "
