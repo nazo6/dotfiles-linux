@@ -15,4 +15,9 @@ if status is-interactive
   abbr -a n nvim
   abbr -a lg lazygit
   abbr -a fish-reload 'source ~/.config/fish/**/*.fish'
+
+  if type -q eza
+    alias ls='eza'
+    alias ll='eza -la'
+  end
 end
