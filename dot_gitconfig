@@ -4,3 +4,4 @@
 [credential]
 	credentialStore = secretservice
 	helper = /usr/bin/git-credential-manager
+  provider = generic
