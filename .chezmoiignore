@@ -1,15 +1,15 @@
-# Whitelist (Linux)
+# Only on linux
 {{ if ne .chezmoi.os "linux" }}
-dot_bashrc
+.bashrc
+.gitconfig
 {{ end }}
 
-# Whitelist (macOS)
+# Only on macos
 {{ if ne .chezmoi.os "darwin" }}
 Library/
-dot_zshenv
+.zsh*
 {{ end }}
 
-# Blacklist (Windows)
 {{ if eq .chezmoi.os "windows" }}
 **/*
 {{ end }}

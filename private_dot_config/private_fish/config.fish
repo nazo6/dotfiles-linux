@@ -21,6 +21,8 @@ if status is-interactive
   if type -q eza
     alias ls='eza'
     alias ll='eza -la'
+  else
+    alias ll='ls -la'
   end
 
   # env
