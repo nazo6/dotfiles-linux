@@ -1,0 +1,5 @@
+# .zshenv: meant to be used in mac
+
+. "$HOME/.cargo/env"
+export PATH="$PATH:/opt/homebrew/bin/"
+export PATH="$PATH:$HOME/.local/share/bob/nvim-bin/"

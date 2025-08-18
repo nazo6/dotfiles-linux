@@ -1,0 +1,15 @@
+# Whitelist (Linux)
+{{ if ne .chezmoi.os "linux" }}
+dot_bashrc
+{{ end }}
+
+# Whitelist (macOS)
+{{ if ne .chezmoi.os "darwin" }}
+Library/
+dot_zshenv
+{{ end }}
+
+# Blacklist (Windows)
+{{ if eq .chezmoi.os "windows" }}
+**/*
+{{ end }}
