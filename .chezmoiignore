@@ -1,7 +1,6 @@
 # Only on linux
 {{ if ne .chezmoi.os "linux" }}
 .bashrc
-.gitconfig
 {{ end }}
 
 # Only on macos

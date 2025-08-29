@@ -1,7 +1,0 @@
-[user]
-	name = nazo6
-	email = git@nazo6.dev
-[credential]
-	credentialStore = secretservice
-	helper = /usr/bin/git-credential-manager
-  provider = generic
