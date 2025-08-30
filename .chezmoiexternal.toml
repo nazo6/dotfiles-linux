@@ -1,3 +1,9 @@
+{{ if eq .chezmoi.os "windows" }}
+["AppData/Local/nvim"]
+type = "git-repo"
+url = "https://github.com/nazo6/nvim"
+{{ else }}
 [".config/nvim"]
 type = "git-repo"
 url = "https://github.com/nazo6/nvim"
+{{ end }}
